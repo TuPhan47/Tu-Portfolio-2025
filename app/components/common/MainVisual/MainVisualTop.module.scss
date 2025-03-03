@@ -1,0 +1,31 @@
+.mv{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(100% - 7.8vw);
+        height: 100%;
+        background: var(--green-light);
+    }
+    &__sign{
+        position: absolute;
+        left: 3.75vw;
+        bottom: 16.5rem;
+    }
+    &__avt{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 72rem;
+        height: 64.8vh;
+        background: var(--green);
+    }
+}
