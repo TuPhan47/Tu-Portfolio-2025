@@ -14,13 +14,6 @@
 	--foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 /* -----------------------------------------------
 Table of Contents (common css)
 --------------------------------------------------
@@ -597,133 +590,80 @@ textarea{
 -------------------------------------------------- */
 /*>>> 2-4-1.  Wrapper     [wrp-***]*/
 .wrp-container{
-	margin: 0 4vw;
-	max-width: 130rem;
-}
-.wrp-container:after{
-	content: "";
-	display: block;
-	clear: both;
-}
-
-@media only screen and (min-width: 1380px){
-	.wrp-container{
-		margin: 0 auto;
-	}
-}/* endMedia */
-
-.wrp-button{
-	text-align: center;
-}
-.wrp-button .btn{
-	margin: 2rem 1rem 0;
-}
-
-.wrp-video{
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 3rem;
-	height: 0;
-	overflow: hidden;
-}
-.wrp-video iframe,
-.wrp-video object,
-.wrp-video embed{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
+	margin: 0 auto;
+	padding: 0 2.4rem;
+	max-width: 132.8rem;
+	box-sizing: border-box;
 }
 
 
 /*>>> 2-4-2.  Headings [hdg-lv*] */
 .hdg-lv2{
-	font-size: 1.8rem;
-	border-bottom: 0.1rem solid #ddd;
-	margin: 3.5rem 0 1rem;
-	padding: 0 0 0.8rem 0;
-	color: #00695c;
-	position: relative;
+	font-size: 4.8rem;
 	font-weight: bold;
+	letter-spacing: 0.08em;
+}
+.hdg-lv2 + .txt-base{
+	margin-top: 4.8rem;
+}
+.hdg-lv2--primary{
+	color: var(--green);
+	text-align: center;
 }
 .hdg-lv3{
-	font-size: 1.6rem;
-	margin: 3rem 0 1rem;
-	color: #00695c;
-	position: relative;
-	font-weight: bold;
+	font-size: 2.4rem;
+	letter-spacing: 0.08em;
 }
-.hdg-lv4{
-	font-size: 1.4rem;
-	margin: 2rem 0 1rem;
-	color: #00695c;
-	font-weight: bold;
+.hdg-lv3 + .txt-base{
+	margin-top: 1.6rem;
 }
+
 
 
 /*>>> 2-4-3.  Text     [txt-***]*/
-.txt-copyright{
-	letter-spacing: 0.1em;
-	text-align: center;
-	font-size: 1.2rem;
+.txt-base{
+	font-size: 1.8rem;
+	line-height: 2;
+	letter-spacing: 0.08em;
 }
-.txt-copyright small{
-	font-size: 100%;
-}
-.txt-note{
-	color: #666;
-	font-size: 1.2rem;
-	text-indent: -1em;
-	padding-left: 1em;
-	margin-top: 0.5rem;
-}
-.txt-note:before{
-	content: "※";
-}
+
 
 /*>>> 2-4-4.  Button   [btn-***]*/
-.btn{
-	background-color: #424242;
-	border-radius: 2rem;
-	border: 0;
-	box-sizing: border-box;
-	color: #fff;
-	cursor: pointer;
-	display: inline-block;
-	font-size: 1.4rem;
-	line-height: 1;
-	padding: 1.5rem;
-	text-align: center;
-	text-decoration: none;
-	vertical-align: middle;
-	overflow: hidden;
-	min-width: 28rem;
-}
-.no-touchevents .btn:hover{
-	text-decoration: none;
-	opacity: 0.7;
-}
-.btn--primary{
-	background-color: #f44336;
-}
-.btn--secondary{
-	background-color: #fff;
-	border: 0.1rem solid #000;
-	color: #000;
-}
+
 
 /*>>> 2-4-5.  Anchor   [acr-***]*/
-.arc-primary{
-	font-weight: bold;
-	color: #f44336;
-}
+
 
 /*>>> 2-4-6. Icon     [icn-***]*/
 
 /*>>> 2-4-7. Label    [lbl-***]*/
 
 /*>>> 2-4-8. List     [lst-***]*/
+.lst-dot, .lst-dot + .txt-base{
+	margin-top: .8rem;
+}
+.lst-dot__item{
+	position: relative;
+	margin-top: .5rem;
+	padding-left: 2rem;
+	font-size: 1.8rem;
+	line-height: 1.7;
+}
+.lst-dot__item::before{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 1rem;
+	left: 0;
+	width: .8rem;
+	height: .8rem;
+	background: var(--green);
+	border-radius: 50%;
+}
+.lst-dot__item:first-of-type{
+	margin-top: 0;
+}
+
 
 /*>>> 2-4-9. Table    [tbl-***]*/
 .tbl-base{
@@ -790,6 +730,123 @@ textarea{
 		flex-direction: row-reverse;
 	}
 }
+
+.bg-green{
+	padding: 15rem 0;
+	background: var(--green-light);
+}
+
+/* box-base */
+.box-base{
+	margin-top: 25rem;
+}
+
+/* box-card */
+.box-card{
+	margin-top: 6rem;
+	margin-left: -2rem;
+	margin-right: -2rem;
+}
+.box-card__item{
+	margin-top: 4rem;
+	padding: 0 2rem;
+}
+.box-card__inner{
+	padding: 3rem 2.4rem;
+	box-shadow: 0 .3rem .8rem rgba(0, 0, 0, 0.24);
+	border-radius: .5rem;
+	text-align: center;
+}
+
+/* box-timeline */
+.box-timeline__head{
+	padding: 3.2rem 0;
+	text-align: center;
+}
+.box-timeline__head--main{
+	font-size: 6.4rem;
+	letter-spacing: 0.08em;
+	font-weight: normal;
+	color: var(--green);
+}
+.box-timeline__head--sub{
+	color: var(--green);
+	line-height: 1.3;
+}
+.box-timeline__content{
+	position: relative;
+}
+.box-timeline__content::before, .box-timeline__content::after{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	width: 1.4rem;
+	height: 1.4rem;
+	background: #BFBFBF;
+	border-radius: 50%;
+}
+.box-timeline__content::after{
+	top: inherit;
+	bottom: 0;
+}
+.box-timeline__inner{
+	position: relative;
+	padding: 12rem 0;
+}
+.box-timeline__inner::before{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	width: .1rem;
+	height: 100%;
+	background: #BFBFBF;
+}
+.box-timeline__row{
+	margin-left: 0;
+	margin-right: 0;
+}
+.box-timeline__img{
+	margin-left: -9rem;
+	padding-right: 9rem;
+	box-sizing: border-box;
+}
+.box-timeline__des{
+	padding-left: 9rem;
+	width: 50%;
+	box-sizing: border-box;
+}
+.box-timeline__title{
+	margin-bottom: 2.4rem;
+	padding: 1.5rem 2rem;
+	background: var(--white);
+}
+.box-timeline__title__txt{
+	font-size: 2.4rem;
+	letter-spacing: 0.08em;
+	font-weight: bold;
+}
+.box-timeline__row--reverse{
+	flex-direction: row-reverse;
+}
+.box-timeline__row--reverse .box-timeline__img{
+	margin-left: 0;
+	margin-right: -9rem;
+	padding-left: 9rem;
+	padding-right: 0;
+}
+.box-timeline__row--reverse .box-timeline__des{
+	padding-left: 0;
+	padding-right: 9rem;
+}
+
 
 /*>>> 2-4-12. Form     [frm-***]*/
 

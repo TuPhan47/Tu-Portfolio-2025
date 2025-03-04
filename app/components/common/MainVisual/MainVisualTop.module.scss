@@ -1,7 +1,7 @@
 .mv{
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 11.2rem);
     z-index: 99;
     &::before{
         content: '';
@@ -18,14 +18,21 @@
         left: 3.75vw;
         bottom: 16.5rem;
     }
-    &__avt{
-        position: absolute;
-        top: 0;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%);
+    &__profile{
+        position: relative;
+        margin: 0 auto;
         width: 72rem;
         height: 64.8vh;
         background: var(--green);
+        z-index: 99;
+    }
+    &__cont{
+        position: absolute;
+        top: 50%;
+        left: 67rem;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 100%;
+        max-width: 48.8rem;
     }
 }
