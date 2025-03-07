@@ -126,9 +126,30 @@ export default function Home() {
       </section>
       <section id="projects" className="box-base">
         <div className="wrp-container">
+          <h2 className="hdg-lv2 hdg-lv2--primary"><span className="hdg-lv2__txt">PROJECTS</span></h2>
           
         </div>
+        <div className="slide grid-row">
+            <div className="slide__item">
+              <a href="" className="slide__inner">https://caily.com.vn/</a>
+            </div>
+            <div className="slide__item">
+              <a href="" className="slide__inner">https://caily.com.vn/</a>
+            </div>
+            <div className="slide__item">
+              <a href="" className="slide__inner">https://caily.com.vn/</a>
+            </div>
+            <div className="slide__item">
+              <a href="" className="slide__inner">https://caily.com.vn/</a>
+            </div>
+            <div className="slide__item">
+              <a href="" className="slide__inner">https://caily.com.vn/</a>
+            </div>
+          </div>
       </section>
+      <div className="bg-cover">
+        <figure className="bg-cover"><Image src="/images/top/bg-cover.jpg" width={1920} height={800} alt="" className="fluid-image" /></figure>
+      </div>
     </>
   );
 }

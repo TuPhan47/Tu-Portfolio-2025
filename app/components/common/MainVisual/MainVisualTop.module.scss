@@ -1,7 +1,7 @@
 .mv{
     position: relative;
     width: 100%;
-    height: calc(100vh - 11.2rem);
+    height: calc(100vh - 13.2rem);
     z-index: 99;
     &::before{
         content: '';
@@ -22,7 +22,7 @@
         position: relative;
         margin: 0 auto;
         width: 72rem;
-        height: 64.8vh;
+        height: 58.8vh;
         background: var(--green);
         z-index: 99;
     }

@@ -1,0 +1,15 @@
+.l-footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0 10rem;
+    width: 100%;
+    &__copyright{
+        margin-top: 1.6rem;
+        font-size: 1.4rem;
+        letter-spacing: 0.08em;
+        color: var(--green);
+    }
+    
+}

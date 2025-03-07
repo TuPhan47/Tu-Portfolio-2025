@@ -3,15 +3,16 @@
     z-index: 100;
     background: var(--white);
     &__logo{
-        padding: 2rem 0;
+        padding: 3rem 0;
         width: 16.5rem;
     }
     &__wrapper{
         position: relative;
-        margin: 0 3.75vw;
+        padding: 0 min(2.4rem, 3.75vw);
         display: flex;
         justify-content: space-between;
         align-items: center;
+        box-sizing: border-box;
     }
     &__tel{
         display: flex;
