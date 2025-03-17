@@ -8,7 +8,7 @@
     }
     &__wrapper{
         position: relative;
-        padding: 0 min(2.4rem, 3.75vw);
+        padding: 0 3.75vw;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -25,6 +25,12 @@
         width: 72rem;
         height: calc(100% + .1rem);
         background: var(--green);
+        @media screen and (max-width: 1500px) {
+            width: 48vw;
+        }
+        @media screen and (max-width: 1200px) {
+            width: 30rem;
+        }
     }
     &__tel__txt{
         font-size: 1.6rem;

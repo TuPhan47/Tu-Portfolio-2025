@@ -13,6 +13,14 @@
         height: 100%;
         background: var(--green-light);
     }
+    &__inner{
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 164.8rem;
+        padding: 0 2.4rem;
+        box-sizing: border-box;
+    }
     &__sign{
         position: absolute;
         left: 3.75vw;
@@ -25,14 +33,24 @@
         height: 58.8vh;
         background: var(--green);
         z-index: 99;
+        @media screen and (max-width: 1500px) {
+            width: 48vw;
+        }
+        @media screen and (max-width: 1200px) {
+            width: 30rem;
+        }
     }
     &__cont{
         position: absolute;
         top: 50%;
-        left: 67rem;
+        right: 0;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         width: 100%;
         max-width: 48.8rem;
+        z-index: 2;
+        @media screen and (max-width: 1600px) {
+           
+        }
     }
 }
