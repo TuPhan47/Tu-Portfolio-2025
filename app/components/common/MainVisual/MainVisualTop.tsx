@@ -6,10 +6,10 @@ import NavAnchor from './components/NavAnchor';
 const MainVisualTop = () => {
     return (
         <div id="mv-top" className={`${styles['mv']}`}>
+            <h1 className={`${styles['mv__sign']}`}><Image src="/images/top/img-sign.svg" width={411} height={308} alt='' /></h1>
             <div className={`${styles['mv__inner']}`}>
-                <h1 className={`${styles['mv__sign']}`}><Image src="/images/top/img-sign.svg" width={411} height={308} alt='' /></h1>
                 <div className={`${styles['mv__profile']}`}>
-                    
+                    <figure className={`${styles['mv__profile__img']}`}><Image src="/images/top/img-profile.png" width={534} height={620} alt='' /></figure>
                 </div>
                 <div className={`${styles['mv__cont']}`}>
                     <h2 className={`${styles['mv__title']} hdg-lv2`}>Head line</h2>

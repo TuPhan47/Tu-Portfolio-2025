@@ -3,6 +3,9 @@
     width: 100%;
     height: calc(100vh - 13.2rem);
     z-index: 99;
+    @media screen and (max-width: 1200px) {
+        height: 100%;
+    }
     &::before{
         content: '';
         display: block;
@@ -20,37 +23,65 @@
         max-width: 164.8rem;
         padding: 0 2.4rem;
         box-sizing: border-box;
+        @media screen and (max-width: 1200px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__sign{
         position: absolute;
         left: 3.75vw;
         bottom: 16.5rem;
+        @media screen and (max-width: 1328px) {
+            left: 2.4rem;
+        }
+        @media screen and (max-width: 1200px) {
+            bottom: inherit;
+            top: 8rem;
+        }
     }
     &__profile{
+        display: flex;
+        justify-content: center;
         position: relative;
         margin: 0 auto;
         width: 72rem;
-        height: 58.8vh;
         background: var(--green);
-        z-index: 99;
-        @media screen and (max-width: 1500px) {
-            width: 48vw;
-        }
-        @media screen and (max-width: 1200px) {
-            width: 30rem;
+        z-index: 1;
+        @media screen and (max-width: 1328px) {
+            width: 50vw;
         }
     }
     &__cont{
         position: absolute;
         top: 50%;
-        right: 0;
+        right: 3.75vw;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         width: 100%;
         max-width: 48.8rem;
         z-index: 2;
-        @media screen and (max-width: 1600px) {
-           
+        @media screen and (max-width: 1400px) {
+            max-width: 37rem;
+        }
+        @media screen and (max-width: 1200px) {
+            padding: 3.2rem 0;
+            max-width: 100%;
+            position: static;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            text-align: center;
         }
     }
+    &__txt{
+        @media screen and (max-width: 1400px) {
+            font-size: 1.6rem;
+        }
+    }
+    // &__title{
+    //     @media screen and (max-width: 1200px) {
+    //         text-align: center;
+    //     }
+    // }
 }

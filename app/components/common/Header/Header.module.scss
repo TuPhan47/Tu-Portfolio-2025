@@ -5,6 +5,10 @@
     &__logo{
         padding: 3rem 0;
         width: 16.5rem;
+        @media screen and (max-width: 959px) {
+            padding: 2.4rem 0;
+            width: 14rem;
+        }
     }
     &__wrapper{
         position: relative;
@@ -13,6 +17,9 @@
         justify-content: space-between;
         align-items: center;
         box-sizing: border-box;
+        @media screen and (max-width: 1328px) {
+            padding: 0 2.4rem;
+        }
     }
     &__tel{
         display: flex;
@@ -25,11 +32,8 @@
         width: 72rem;
         height: calc(100% + .1rem);
         background: var(--green);
-        @media screen and (max-width: 1500px) {
-            width: 48vw;
-        }
-        @media screen and (max-width: 1200px) {
-            width: 30rem;
+        @media screen and (max-width: 1328px) {
+            width: 50vw;
         }
     }
     &__tel__txt{
